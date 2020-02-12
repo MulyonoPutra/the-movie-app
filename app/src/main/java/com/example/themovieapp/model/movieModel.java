@@ -1,6 +1,6 @@
 package com.example.themovieapp.model;
 
-public class movieModel {
+public class MovieModel {
 
     private String movieTitle;
     private String moviePoster;
