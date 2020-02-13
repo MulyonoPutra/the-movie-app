@@ -38,7 +38,7 @@ public class ResultsItem{
 	private double popularity;
 
 	@SerializedName("vote_average")
-	private int voteAverage;
+	private float voteAverage;
 
 	@SerializedName("id")
 	private int id;
@@ -133,7 +133,7 @@ public class ResultsItem{
 		this.voteAverage = voteAverage;
 	}
 
-	public int getVoteAverage(){
+	public float getVoteAverage(){
 		return voteAverage;
 	}
 

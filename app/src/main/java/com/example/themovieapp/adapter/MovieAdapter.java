@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.themovieapp.R;
-import com.example.themovieapp.model.MovieModel;
+import com.example.themovieapp.model.ResultsItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +21,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
 
     private Context context;
 
-    private List <MovieModel> data = new ArrayList<>();
+    List <ResultsItem> data = new ArrayList<>();
 
-    public MovieAdapter(Context context, List<MovieModel> data) {
+    public MovieAdapter(Context context, List<ResultsItem> data) {
         this.context = context;
         this.data = data;
     }
@@ -39,8 +39,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
     /* Untuk set data */
     @Override
     public void onBindViewHolder(@NonNull MovieAdapter.MyViewHolder holder, int position) {
-        holder.tvTitle.setText(data.get(position).getMovieTitle());
-        Glide.with(context).load(data.get(position).getMoviePoster()).into(holder.ivPoster); /*Untuk meload gambar menggunakan library Glide*/
+        holder.tvTitle.setText(data.get(position).getTitle());
+        Glide.with(context).load("https://image.tmdb.org/t/p/w500" + data.get(position).getPosterPath()).into(holder.ivPoster); /*Untuk meload gambar menggunakan library Glide*/
 
 
     }
