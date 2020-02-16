@@ -14,14 +14,21 @@
         <activity
             android:name=".DetailMovieActivity"
             android:label="@string/title_activity_detail_movie"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".MainActivity">
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity android:name=".MainActivity"></activity>
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashScreenStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
