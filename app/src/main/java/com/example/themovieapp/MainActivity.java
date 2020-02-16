@@ -3,26 +3,22 @@ package com.example.themovieapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.widget.Toast;
-
 import com.example.themovieapp.adapter.MovieAdapter;
 import com.example.themovieapp.model.ResponseMovie;
 import com.example.themovieapp.model.ResultsItem;
 import com.example.themovieapp.retrofit.RetrofitConfig;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<ResultsItem> dataMovie = new ArrayList<>();
-    RecyclerView recyclerView;
+    private List<ResultsItem> dataMovie = new ArrayList<>();
+    private RecyclerView recyclerView;
 
 
     @Override

@@ -3,23 +3,18 @@ package com.example.themovieapp.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcel;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.example.themovieapp.DetailMovieActivity;
 import com.example.themovieapp.R;
 import com.example.themovieapp.model.ResultsItem;
-
 import org.parceler.Parcels;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,8 +23,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
     public static final String DATA_MOVIE = "dataMovie";
     public static final String DATA_EXTRA = "dataExtra";
     private Context context;
-
-    List <ResultsItem> data = new ArrayList<>();
+    private List <ResultsItem> data = new ArrayList<>();
 
     public MovieAdapter(Context context, List<ResultsItem> data) {
         this.context = context;
@@ -63,18 +57,15 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
 
                 context.startActivity(move);
             }
-
-
         });
-
     }
 
     /* Jumlah data */
     @Override
     public int getItemCount() {
-        return data.size(); /* -> Untuk menyesuaikan data dengan List */
+        /* Untuk menyesuaikan data dengan List */
+        return data.size();
     }
-
 
     /* Mengenalkan komponen didalam item */
     public class MyViewHolder extends RecyclerView.ViewHolder {
