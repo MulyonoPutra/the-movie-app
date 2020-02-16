@@ -2,6 +2,8 @@ package com.example.themovieapp.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcel;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +18,15 @@ import com.example.themovieapp.DetailMovieActivity;
 import com.example.themovieapp.R;
 import com.example.themovieapp.model.ResultsItem;
 
+import org.parceler.Parcels;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder> {
 
+    public static final String DATA_MOVIE = "dataMovie";
+    public static final String DATA_EXTRA = "dataExtra";
     private Context context;
 
     List <ResultsItem> data = new ArrayList<>();
@@ -48,8 +54,17 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
             @Override
             public void onClick(View v) {
                 Intent move = new Intent(context, DetailMovieActivity.class);
+
+                /*Untuk mengirim data object yaitu ke DetailMovieActivity */
+                Bundle bundle = new Bundle();
+                /* Untuk membungkus data yang akan dikirim ke DetailMovieActivity */
+                bundle.putParcelable(DATA_MOVIE, Parcels.wrap(data.get(position)));
+                move.putExtra(DATA_EXTRA, bundle);
+
                 context.startActivity(move);
             }
+
+
         });
 
     }

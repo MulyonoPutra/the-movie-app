@@ -4,7 +4,10 @@ import java.util.List;
 import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
 @Generated("com.robohorse.robopojogenerator")
+@Parcel
 public class ResultsItem{
 
 	@SerializedName("overview")
