@@ -1,6 +1,7 @@
 package com.example.themovieapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.themovieapp.DetailMovieActivity;
 import com.example.themovieapp.R;
 import com.example.themovieapp.model.ResultsItem;
 
@@ -42,6 +44,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         holder.tvTitle.setText(data.get(position).getTitle());
         Glide.with(context).load("https://image.tmdb.org/t/p/w500" + data.get(position).getPosterPath()).into(holder.ivPoster); /*Untuk meload gambar menggunakan library Glide*/
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent move = new Intent(context, DetailMovieActivity.class);
+                context.startActivity(move);
+            }
+        });
 
     }
 
