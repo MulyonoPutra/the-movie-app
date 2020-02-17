@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:scaleType="centerCrop"
+        android:background="@layout/image_border"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <LinearLayout
@@ -27,7 +28,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="TextView"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="lobster"
             android:textColor="?attr/colorBackgroundFloating" />
     </LinearLayout>
 </LinearLayout>
