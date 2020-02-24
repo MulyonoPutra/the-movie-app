@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recyclerView);
 
-        getDataOnline();
+        getDataMovieDB();
 
         /*set Adapter*/
         recyclerView.setAdapter(new MovieAdapter(MainActivity.this, dataMovie));
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new GridLayoutManager(MainActivity.this, 2));
     }
 
-    private void getDataOnline() {
+    private void getDataMovieDB() {
         Call<ResponseMovie> request = RetrofitConfig.getApiService().getDataMovie("3a1daf644fcfb442c6fc242d0f1915ab");
         request.enqueue(new Callback<ResponseMovie>() {
             @Override

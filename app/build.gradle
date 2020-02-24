@@ -39,4 +39,6 @@ dependencies {
     implementation 'org.glassfish:javax.annotation:3.1.1-b02'
     implementation 'org.parceler:parceler-api:1.1.12'
     annotationProcessor 'org.parceler:parceler:1.1.12'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
 }

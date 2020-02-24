@@ -30,11 +30,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         this.data = data;
     }
 
-    /* Untuk menyambungkan dengan Layout item movie*/
+    /* Untuk menyambungkan dengan Layout item movie */
     @NonNull
     @Override
     public MovieAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       View itemView = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false);
+       View itemView = LayoutInflater.from(context).inflate(R.layout.card_item, parent, false);
         return new MyViewHolder(itemView);
     }
 
@@ -74,7 +74,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.item_title);
-            ivPoster = itemView.findViewById(R.id.image_movies);
+            ivPoster = itemView.findViewById(R.id.images_item_movies);
         }
     }
 }

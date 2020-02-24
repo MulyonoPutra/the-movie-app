@@ -8,7 +8,7 @@ import org.parceler.Parcel;
 
 @Generated("com.robohorse.robopojogenerator")
 @Parcel
-public class ResultsItem{
+public class ResultsItem {
 
 	@SerializedName("overview")
 	private String overview;
