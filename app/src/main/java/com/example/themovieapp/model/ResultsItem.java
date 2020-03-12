@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 import org.parceler.Parcel;
 
 @Generated("com.robohorse.robopojogenerator")
-@Parcel
+@Parcel(Parcel.Serialization.BEAN)
 public class ResultsItem {
 
 	@SerializedName("overview")
@@ -132,7 +132,7 @@ public class ResultsItem {
 		return popularity;
 	}
 
-	public void setVoteAverage(int voteAverage){
+	public void setVoteAverage(float voteAverage){
 		this.voteAverage = voteAverage;
 	}
 

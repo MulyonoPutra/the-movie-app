@@ -3,34 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
     android:background="@android:color/black"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/image_movies"
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop"
-        android:background="@layout/image_border"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true"
+        android:layout_margin="5dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="40dp"
-        android:layout_marginBottom="5dp"
-        android:background="@android:color/background_dark"
-        android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/image_movies"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+    </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/background_dark"
+            android:orientation="horizontal">
 
         <TextView
             android:id="@+id/item_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:layout_marginTop="4dp"
             android:text="TextView"
             android:fontFamily="lobster"
             android:textColor="?attr/colorBackgroundFloating" />
     </LinearLayout>
 </LinearLayout>
+

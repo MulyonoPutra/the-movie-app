@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         /*set Adapter*/
         recyclerView.setAdapter(new MovieAdapter(MainActivity.this, dataMovie));
         /*set Layout Manager*/
-        recyclerView.setLayoutManager(new GridLayoutManager(MainActivity.this, 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(MainActivity.this, 1));
+
     }
 
     private void getDataMovieDB() {
