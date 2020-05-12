@@ -13,5 +13,4 @@ public class RetrofitConfig {
         ApiService service = retrofit.create(ApiService.class);
         return service;
     }
-
 }

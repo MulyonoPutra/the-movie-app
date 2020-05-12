@@ -29,13 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
         getDataMovieDB();
 
-        /*set Adapter*/
+        /* set Adapter */
         recyclerView.setAdapter(new MovieAdapter(MainActivity.this, dataMovie));
-        /*set Layout Manager*/
+        /* set Layout Manager */
         recyclerView.setLayoutManager(new GridLayoutManager(MainActivity.this, 1));
 
     }
 
+    /* Callback function */
     private void getDataMovieDB() {
         Call<ResponseMovie> request = RetrofitConfig.getApiService().getDataMovie("3a1daf644fcfb442c6fc242d0f1915ab");
         request.enqueue(new Callback<ResponseMovie>() {
@@ -48,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Request Not Success", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onFailure(Call<ResponseMovie> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "Request Failure" + t.getMessage(), Toast.LENGTH_LONG).show();

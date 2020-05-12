@@ -24,9 +24,9 @@ public class DetailMovieActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /* Untuk menerima data yang dikirim dari MovieAdapter */
+        /* Receive data from MovieAdapter */
         Bundle bundle = getIntent().getBundleExtra(MovieAdapter.DATA_EXTRA);
-        /* Membuka bungkus yang dikirim dari MovieAdapter */
+        /* Open data from MovieAdapter */
         dataMovie = Parcels.unwrap(bundle.getParcelable(MovieAdapter.DATA_MOVIE));
 
         getSupportActionBar().setTitle(dataMovie.getTitle());
@@ -34,6 +34,7 @@ public class DetailMovieActivity extends AppCompatActivity {
         ImageView backdropImageView = findViewById(R.id.detail_backdrop);
         TextView descriptionsTextView = findViewById(R.id.detail_descriptions);
 
+        /* Library Glide */
         Glide.with(DetailMovieActivity.this).
                 load("https://image.tmdb.org/t/p/w500" + dataMovie.getBackdropPath()).into(backdropImageView);
         descriptionsTextView.setText(dataMovie.getOverview());
